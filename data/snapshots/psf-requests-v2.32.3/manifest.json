@@ -1,0 +1,97 @@
+{
+  "changelog_path": "HISTORY.md",
+  "checksums": {
+    "graph/nodes.jsonl": "341ddd9abb064b6b0b86bcfb12840a6788193aeeb47a518bef1d4dc168cece7b",
+    "graph/relationships.jsonl": "102674343bed1d2ac06d0be4c680763ca6bb6dd177a5296ac7466e15847d1110",
+    "raw/git/changelog.jsonl": "24ce8ba068c06707fd0b523ec1d5a6bda2975f4d2ae6934d88fa0863b2b128d4",
+    "raw/git/code_chunks.jsonl": "4022b253712c8367c6f6a87ecc2b76804042534ffad5efdd3c1dcef016311b58",
+    "raw/git/commits.jsonl": "77f41ed350006b3203034429c78d0e992e37355e484c2361bb945076268a739a",
+    "raw/git/doc_chunks.jsonl": "dd8db989cdaf37a1cca50342a3b7274a63f54a28e26b7f8f3956f94b247eac7e",
+    "raw/git/pull_requests.jsonl": "2e83a220419a30b2209b581d9ed39f6a260ec2d55b3e768bb3d963ba1fb1a82c",
+    "raw/git/release_contains.jsonl": "11c4fbdf0f24b831b302c5317206a5437131679e03baebe481ac7b39e95c69c1",
+    "raw/git/tags.jsonl": "2cf0b85bd7a85e21a991157dc97852522bcb6e8526e8db570e0cb6bf5874411d"
+  },
+  "collected_at": "2026-10-25T21:41:21Z",
+  "collections": {
+    "git": {
+      "changelog": 155,
+      "code_chunks": 254,
+      "commits": 846,
+      "doc_chunks": 157,
+      "pull_requests": 368,
+      "release_contains": 8937,
+      "tags": 161
+    }
+  },
+  "errors": [],
+  "extractor_version": "1.0",
+  "graph": {
+    "issue_links": {
+      "POSSIBLY_ADDRESSES:inferred": 15,
+      "REFERENCES:referenced": 33
+    },
+    "nodes": {
+      "ChangelogEntry": 645,
+      "CodeChunk": 254,
+      "Commit": 846,
+      "Doc": 16,
+      "DocChunk": 157,
+      "ExceptionType": 98,
+      "File": 238,
+      "FileRevision": 925,
+      "Issue": 97,
+      "PatchHunk": 1798,
+      "PullRequest": 368,
+      "Release": 161,
+      "Repository": 1
+    },
+    "relationships": {
+      "CHANGES": 1009,
+      "CONTAINS_COMMIT": 8937,
+      "HAS_CHUNK": 411,
+      "HAS_COMMIT": 478,
+      "HAS_DOC": 16,
+      "HAS_FILE": 238,
+      "HAS_ISSUE": 97,
+      "HAS_NOTE": 632,
+      "HAS_PATCH": 1798,
+      "HAS_PR": 368,
+      "HAS_RELEASE": 161,
+      "HAS_REVISION": 925,
+      "IN_FILE": 1798,
+      "MENTIONS": 107,
+      "MENTIONS_EXCEPTION": 64,
+      "MERGED_AS": 368,
+      "POSSIBLY_ADDRESSES": 15,
+      "PRODUCED": 910,
+      "REFERENCES": 33,
+      "TOUCHES_EXCEPTION": 488
+    },
+    "validation": {
+      "dropped_relationships": 0,
+      "examples": {},
+      "ok": true,
+      "problems": {}
+    }
+  },
+  "release_history_complete": true,
+  "repository": {
+    "id": "repo:psf/requests",
+    "name": "requests",
+    "owner": "psf",
+    "url": "https://github.com/psf/requests"
+  },
+  "snapshot_id": "psf-requests-v2.32.3",
+  "source_ref": {
+    "ref": "v2.32.3",
+    "sha": "0e322af87745eff34caffe4df68456ebc20d9068"
+  },
+  "sources": [
+    "git"
+  ],
+  "status": "normalized",
+  "window": {
+    "since": "2017-01-01",
+    "until": "2024-06-30"
+  }
+}

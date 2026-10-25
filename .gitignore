@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+
+# derived or downloaded data (rebuilt by `make data` / `make model`)
+data/http_cache/
+data/models/
+data/repos/
+data/snapshots/*/graph/
+data/snapshots/*/embeddings/

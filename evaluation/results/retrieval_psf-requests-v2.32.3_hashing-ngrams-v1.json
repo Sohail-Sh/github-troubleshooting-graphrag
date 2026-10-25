@@ -1,0 +1,1919 @@
+{
+  "snapshot": "psf-requests-v2.32.3",
+  "embedding_model": "hashing-ngrams-v1",
+  "cases_file": "/home/user/github-troubleshooting-graphrag/evaluation/benchmark_cases.json",
+  "summary": {
+    "keyword": {
+      "hit_at_1": 0.353,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.602,
+      "answered_with_correct_fix": 0.353,
+      "false_rejections": 4,
+      "no_match_rejection": 1.0,
+      "avg_latency_ms": 223.4,
+      "positives": 17,
+      "negatives": 6
+    },
+    "vector": {
+      "hit_at_1": 0.529,
+      "hit_at_5": 0.941,
+      "mrr_at_5": 0.656,
+      "answered_with_correct_fix": 0.529,
+      "false_rejections": 4,
+      "no_match_rejection": 1.0,
+      "avg_latency_ms": 197.2,
+      "positives": 17,
+      "negatives": 6
+    },
+    "hybrid": {
+      "hit_at_1": 0.588,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.759,
+      "answered_with_correct_fix": 0.588,
+      "false_rejections": 1,
+      "no_match_rejection": 1.0,
+      "avg_latency_ms": 251.3,
+      "positives": 17,
+      "negatives": 6
+    },
+    "graph": {
+      "hit_at_1": 0.765,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.882,
+      "answered_with_correct_fix": 0.706,
+      "false_rejections": 1,
+      "no_match_rejection": 1.0,
+      "avg_latency_ms": 255.9,
+      "positives": 17,
+      "negatives": 6
+    }
+  },
+  "cases": [
+    {
+      "mode": "keyword",
+      "case": "idna-leading-dot-message",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#4004",
+        "Issue#3780",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "Issue#5367"
+      ],
+      "latency_ms": 646.6,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "idna-leading-dot-prose",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#4004",
+        "Issue#3780"
+      ],
+      "latency_ms": 318.7,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "idna-leading-dot-traceback",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#4004",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "Issue#3780",
+        "Issue#5367"
+      ],
+      "latency_ms": 189.7,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "ca-bundle-invalid-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#3926",
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "PullRequest#6036",
+        "PullRequest#4371"
+      ],
+      "latency_ms": 170.8,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "redirect-non-ascii-location",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#3888",
+        "Issue#3780",
+        "PullRequest#4004",
+        "Issue#4030"
+      ],
+      "latency_ms": 212.7,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "sslerror-raised-as-connectionerror",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6057",
+        "Issue#4209",
+        "PullRequest#6095",
+        "Issue#4353",
+        "PullRequest#4765"
+      ],
+      "latency_ms": 178.0,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#4353",
+        "PullRequest#5670",
+        "PullRequest#5924",
+        "PullRequest#4805"
+      ],
+      "latency_ms": 173.4,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "winreg-proxyoverride-type",
+      "kind": "positive",
+      "rank": 3,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#3979",
+        "PullRequest#6149",
+        "Issue#4373",
+        "PullRequest#6095",
+        "PullRequest#4380"
+      ],
+      "latency_ms": 139.2,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "chunked-two-host-headers",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5274",
+        "PullRequest#4739",
+        "PullRequest#4910",
+        "PullRequest#5128",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 307.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "session-send-ignores-proxies",
+      "kind": "positive",
+      "rank": 3,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4739",
+        "Issue#5677",
+        "Issue#3954",
+        "PullRequest#5924"
+      ],
+      "latency_ms": 103.7,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "zip-extract-race",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5223",
+        "PullRequest#4371",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#4922"
+      ],
+      "latency_ms": 271.7,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "jsondecodeerror-unpickle",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6628",
+        "PullRequest#6036",
+        "PullRequest#5856",
+        "PullRequest#6095",
+        "PullRequest#6097"
+      ],
+      "latency_ms": 105.2,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "leading-double-slash-path",
+      "kind": "positive",
+      "rank": 3,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#4805",
+        "PullRequest#6095",
+        "Issue#6643",
+        "PullRequest#4004",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 267.0,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "json-default-utf8",
+      "kind": "positive",
+      "rank": 2,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "Issue#5667",
+        "PullRequest#4749",
+        "PullRequest#5382",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 219.8,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "emoji-content-length",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6586",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#5496",
+        "PullRequest#4678"
+      ],
+      "latency_ms": 240.7,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "keyword",
+      "case": "custom-sslcontext-adapter",
+      "kind": "positive",
+      "rank": 3,
+      "status": "no_reliable_match",
+      "top": [
+        "Issue#3926",
+        "PullRequest#6095",
+        "Issue#6715",
+        "PullRequest#3952",
+        "PullRequest#6667"
+      ],
+      "latency_ms": 145.5,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "idna-import-slow",
+      "kind": "positive",
+      "rank": 2,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067",
+        "Issue#3780",
+        "PullRequest#6095",
+        "PullRequest#4922",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 264.8,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-numpy-broadcast",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4853",
+        "PullRequest#4987",
+        "PullRequest#4332",
+        "PullRequest#5777"
+      ],
+      "latency_ms": 138.3,
+      "rejected": true
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-django-no-table",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4978",
+        "PullRequest#6095",
+        "PullRequest#6018",
+        "PullRequest#6498",
+        "PullRequest#5160"
+      ],
+      "latency_ms": 124.7,
+      "rejected": true
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-missing-env",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4004",
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "PullRequest#3979",
+        "PullRequest#6149"
+      ],
+      "latency_ms": 207.5,
+      "rejected": true
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-java-npe",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6155",
+        "PullRequest#6497",
+        "PullRequest#4805",
+        "PullRequest#6095",
+        "PullRequest#5909"
+      ],
+      "latency_ms": 171.2,
+      "rejected": true
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-js-undefined-map",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "PullRequest#4805",
+        "PullRequest#5496",
+        "PullRequest#4004"
+      ],
+      "latency_ms": 178.6,
+      "rejected": true
+    },
+    {
+      "mode": "keyword",
+      "case": "neg-pandas-missing",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067"
+      ],
+      "latency_ms": 363.6,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "idna-leading-dot-message",
+      "kind": "positive",
+      "rank": 8,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#6628",
+        "PullRequest#4004",
+        "PullRequest#4067",
+        "PullRequest#5856"
+      ],
+      "latency_ms": 197.5,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "idna-leading-dot-prose",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "PullRequest#6095",
+        "Issue#4353",
+        "PullRequest#6057",
+        "PullRequest#6036"
+      ],
+      "latency_ms": 245.8,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "idna-leading-dot-traceback",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "Issue#3780",
+        "PullRequest#4004",
+        "Issue#5367"
+      ],
+      "latency_ms": 388.2,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "ca-bundle-invalid-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#3926",
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "PullRequest#5141",
+        "PullRequest#4371"
+      ],
+      "latency_ms": 140.4,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "redirect-non-ascii-location",
+      "kind": "positive",
+      "rank": 4,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#3846",
+        "PullRequest#6095",
+        "PullRequest#3963",
+        "Issue#3888",
+        "PullRequest#4835"
+      ],
+      "latency_ms": 186.3,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "sslerror-raised-as-connectionerror",
+      "kind": "positive",
+      "rank": 4,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6057",
+        "PullRequest#3827",
+        "PullRequest#4067",
+        "Issue#4209",
+        "PullRequest#6095"
+      ],
+      "latency_ms": 201.2,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#4353",
+        "PullRequest#6095",
+        "PullRequest#3865",
+        "PullRequest#5670",
+        "PullRequest#4835"
+      ],
+      "latency_ms": 168.7,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "winreg-proxyoverride-type",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#4373",
+        "PullRequest#3979",
+        "PullRequest#6095",
+        "PullRequest#6302",
+        "PullRequest#6149"
+      ],
+      "latency_ms": 178.8,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "chunked-two-host-headers",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5274",
+        "PullRequest#6095",
+        "PullRequest#4004",
+        "PullRequest#4067",
+        "PullRequest#4835"
+      ],
+      "latency_ms": 258.0,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "session-send-ignores-proxies",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5677",
+        "PullRequest#5924",
+        "PullRequest#6095",
+        "PullRequest#6498",
+        "PullRequest#3865"
+      ],
+      "latency_ms": 99.2,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "zip-extract-race",
+      "kind": "positive",
+      "rank": 4,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#5851",
+        "PullRequest#6095",
+        "PullRequest#4371",
+        "Issue#5223",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 167.7,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "jsondecodeerror-unpickle",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6628",
+        "PullRequest#6097",
+        "PullRequest#5856",
+        "PullRequest#6036",
+        "PullRequest#5777"
+      ],
+      "latency_ms": 187.9,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "leading-double-slash-path",
+      "kind": "positive",
+      "rank": 5,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "Issue#3954",
+        "PullRequest#4739",
+        "PullRequest#6368",
+        "Issue#6643"
+      ],
+      "latency_ms": 92.2,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "json-default-utf8",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5667",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#4371",
+        "PullRequest#6133"
+      ],
+      "latency_ms": 287.4,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "emoji-content-length",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6586",
+        "PullRequest#6095",
+        "PullRequest#5496",
+        "Issue#3844",
+        "PullRequest#5239"
+      ],
+      "latency_ms": 144.0,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "custom-sslcontext-adapter",
+      "kind": "positive",
+      "rank": 2,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "Issue#6715",
+        "PullRequest#6710",
+        "PullRequest#4004",
+        "PullRequest#6724"
+      ],
+      "latency_ms": 177.3,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "idna-import-slow",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#3780",
+        "PullRequest#3827",
+        "PullRequest#6505",
+        "PullRequest#4922"
+      ],
+      "latency_ms": 259.2,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "neg-numpy-broadcast",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4004",
+        "PullRequest#4853",
+        "PullRequest#5777",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 207.3,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "neg-django-no-table",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#6498",
+        "PullRequest#4805",
+        "PullRequest#4067",
+        "PullRequest#5856"
+      ],
+      "latency_ms": 150.9,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "neg-missing-env",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#6057",
+        "PullRequest#4004",
+        "Issue#4209"
+      ],
+      "latency_ms": 197.2,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "neg-java-npe",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#5856",
+        "PullRequest#4067",
+        "PullRequest#5338",
+        "PullRequest#6057"
+      ],
+      "latency_ms": 195.3,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "neg-js-undefined-map",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#4004",
+        "PullRequest#6057",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 191.4,
+      "rejected": true
+    },
+    {
+      "mode": "vector",
+      "case": "neg-pandas-missing",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067",
+        "PullRequest#6702",
+        "PullRequest#4004",
+        "PullRequest#6095",
+        "Issue#4965"
+      ],
+      "latency_ms": 214.2,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "idna-leading-dot-message",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#4004",
+        "Issue#3780",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "Issue#5367"
+      ],
+      "latency_ms": 241.9,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "idna-leading-dot-prose",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "PullRequest#6095",
+        "Issue#3780",
+        "Issue#4353",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 250.8,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "idna-leading-dot-traceback",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#4004",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "Issue#3780",
+        "Issue#5367"
+      ],
+      "latency_ms": 261.9,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "ca-bundle-invalid-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#3926",
+        "PullRequest#4835",
+        "PullRequest#6095",
+        "PullRequest#4371",
+        "PullRequest#3952"
+      ],
+      "latency_ms": 182.3,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "redirect-non-ascii-location",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#3888",
+        "PullRequest#3846",
+        "PullRequest#3963",
+        "Issue#3780"
+      ],
+      "latency_ms": 284.1,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "sslerror-raised-as-connectionerror",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6057",
+        "Issue#4209",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "Issue#4353"
+      ],
+      "latency_ms": 209.0,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#4353",
+        "PullRequest#6095",
+        "PullRequest#5670",
+        "PullRequest#5924",
+        "PullRequest#6655"
+      ],
+      "latency_ms": 245.1,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "winreg-proxyoverride-type",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#3979",
+        "Issue#4373",
+        "PullRequest#6095",
+        "PullRequest#6149",
+        "PullRequest#6302"
+      ],
+      "latency_ms": 189.7,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "chunked-two-host-headers",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5274",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#4004",
+        "PullRequest#4739"
+      ],
+      "latency_ms": 228.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "session-send-ignores-proxies",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5677",
+        "PullRequest#5924",
+        "PullRequest#6095",
+        "PullRequest#6498",
+        "PullRequest#3865"
+      ],
+      "latency_ms": 162.5,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "zip-extract-race",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5223",
+        "PullRequest#4371",
+        "PullRequest#6095",
+        "PullRequest#5851",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 284.3,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "jsondecodeerror-unpickle",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6628",
+        "PullRequest#6036",
+        "PullRequest#5856",
+        "PullRequest#6097",
+        "PullRequest#5777"
+      ],
+      "latency_ms": 201.1,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "leading-double-slash-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6643",
+        "Issue#3954",
+        "PullRequest#4739",
+        "PullRequest#4910",
+        "PullRequest#6095"
+      ],
+      "latency_ms": 282.9,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "json-default-utf8",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5667",
+        "PullRequest#6095",
+        "PullRequest#4749",
+        "PullRequest#4067",
+        "PullRequest#4976"
+      ],
+      "latency_ms": 261.1,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "emoji-content-length",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6586",
+        "PullRequest#6095",
+        "PullRequest#5496",
+        "PullRequest#4067",
+        "PullRequest#6154"
+      ],
+      "latency_ms": 239.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "custom-sslcontext-adapter",
+      "kind": "positive",
+      "rank": 2,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "Issue#6715",
+        "PullRequest#6710",
+        "Issue#3926",
+        "PullRequest#6667"
+      ],
+      "latency_ms": 278.0,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "idna-import-slow",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#3780",
+        "PullRequest#4067",
+        "PullRequest#4922",
+        "PullRequest#3827"
+      ],
+      "latency_ms": 370.6,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-numpy-broadcast",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4853",
+        "PullRequest#5777",
+        "PullRequest#4987",
+        "PullRequest#6097"
+      ],
+      "latency_ms": 223.6,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-django-no-table",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#6498",
+        "PullRequest#6018",
+        "PullRequest#4805",
+        "PullRequest#4410"
+      ],
+      "latency_ms": 229.7,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-missing-env",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4004",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#6057",
+        "PullRequest#4835"
+      ],
+      "latency_ms": 294.7,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-java-npe",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4805",
+        "PullRequest#5856",
+        "PullRequest#6155",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 398.5,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-js-undefined-map",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#6057",
+        "PullRequest#3865",
+        "PullRequest#4835",
+        "PullRequest#4067"
+      ],
+      "latency_ms": 269.1,
+      "rejected": true
+    },
+    {
+      "mode": "hybrid",
+      "case": "neg-pandas-missing",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4067",
+        "PullRequest#6702",
+        "PullRequest#4004",
+        "PullRequest#6095",
+        "Issue#4965"
+      ],
+      "latency_ms": 189.9,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "idna-leading-dot-message",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "Issue#3780",
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#4004"
+      ],
+      "latency_ms": 275.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "idna-leading-dot-prose",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "Issue#3780",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "Issue#4353"
+      ],
+      "latency_ms": 327.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "idna-leading-dot-traceback",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5367",
+        "Issue#3780",
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#4004"
+      ],
+      "latency_ms": 229.4,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "ca-bundle-invalid-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#3926",
+        "PullRequest#4371",
+        "PullRequest#4835",
+        "PullRequest#6036",
+        "PullRequest#6095"
+      ],
+      "latency_ms": 198.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "redirect-non-ascii-location",
+      "kind": "positive",
+      "rank": 2,
+      "status": "match_without_fix",
+      "top": [
+        "Issue#4030",
+        "Issue#3888",
+        "PullRequest#6095",
+        "PullRequest#3846",
+        "PullRequest#3963"
+      ],
+      "latency_ms": 307.8,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "evidence_level": "inferred",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "graph",
+      "case": "sslerror-raised-as-connectionerror",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6057",
+        "Issue#4209",
+        "PullRequest#4217",
+        "PullRequest#4765",
+        "PullRequest#5810"
+      ],
+      "latency_ms": 227.0,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "graph",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#4353",
+        "PullRequest#5670",
+        "PullRequest#6655",
+        "PullRequest#5924",
+        "PullRequest#3865"
+      ],
+      "latency_ms": 211.9,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "winreg-proxyoverride-type",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#3979",
+        "Issue#4373",
+        "PullRequest#6149",
+        "PullRequest#6302",
+        "PullRequest#4380"
+      ],
+      "latency_ms": 209.5,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "graph",
+      "case": "chunked-two-host-headers",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5274",
+        "PullRequest#4739",
+        "Issue#3844",
+        "PullRequest#5128",
+        "PullRequest#4910"
+      ],
+      "latency_ms": 269.2,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "session-send-ignores-proxies",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5677",
+        "PullRequest#5924",
+        "PullRequest#6498",
+        "PullRequest#3865",
+        "PullRequest#6581"
+      ],
+      "latency_ms": 140.4,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "zip-extract-race",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5223",
+        "PullRequest#4371",
+        "PullRequest#5851",
+        "PullRequest#4922",
+        "PullRequest#4316"
+      ],
+      "latency_ms": 276.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "jsondecodeerror-unpickle",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#5856",
+        "Issue#6628",
+        "PullRequest#6036",
+        "PullRequest#6097",
+        "PullRequest#5777"
+      ],
+      "latency_ms": 253.2,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "graph",
+      "case": "leading-double-slash-path",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6643",
+        "Issue#3954",
+        "PullRequest#4739",
+        "PullRequest#4910",
+        "PullRequest#6368"
+      ],
+      "latency_ms": 260.1,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "json-default-utf8",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#5667",
+        "PullRequest#4749",
+        "PullRequest#4976",
+        "PullRequest#5382",
+        "PullRequest#4371"
+      ],
+      "latency_ms": 285.6,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "emoji-content-length",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6586",
+        "PullRequest#5496",
+        "PullRequest#6154",
+        "PullRequest#4678",
+        "PullRequest#6095"
+      ],
+      "latency_ms": 328.4,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "custom-sslcontext-adapter",
+      "kind": "positive",
+      "rank": 1,
+      "status": "fix_found",
+      "top": [
+        "Issue#6715",
+        "PullRequest#6710",
+        "PullRequest#6724",
+        "PullRequest#6667",
+        "Issue#3926"
+      ],
+      "latency_ms": 265.5,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "graph",
+      "case": "idna-import-slow",
+      "kind": "positive",
+      "rank": 1,
+      "status": "no_reliable_match",
+      "top": [
+        "Issue#3780",
+        "PullRequest#4922",
+        "PullRequest#3979",
+        "PullRequest#4182",
+        "PullRequest#5797"
+      ],
+      "latency_ms": 288.0,
+      "rejected": true,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "fix_path_correct": false
+    },
+    {
+      "mode": "graph",
+      "case": "neg-numpy-broadcast",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#4853",
+        "PullRequest#5777",
+        "PullRequest#4987",
+        "PullRequest#6097",
+        "PullRequest#5856"
+      ],
+      "latency_ms": 236.9,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "neg-django-no-table",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6498",
+        "PullRequest#6018",
+        "PullRequest#4978",
+        "PullRequest#5856",
+        "PullRequest#4410"
+      ],
+      "latency_ms": 238.8,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "neg-missing-env",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#3979",
+        "PullRequest#5643",
+        "PullRequest#5105",
+        "PullRequest#6057",
+        "PullRequest#6095"
+      ],
+      "latency_ms": 287.9,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "neg-java-npe",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#5856",
+        "PullRequest#6155",
+        "PullRequest#6057",
+        "PullRequest#5338",
+        "PullRequest#6497"
+      ],
+      "latency_ms": 290.9,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "neg-js-undefined-map",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6057",
+        "PullRequest#3865",
+        "PullRequest#3979",
+        "PullRequest#5338",
+        "PullRequest#5496"
+      ],
+      "latency_ms": 271.8,
+      "rejected": true
+    },
+    {
+      "mode": "graph",
+      "case": "neg-pandas-missing",
+      "kind": "negative",
+      "rank": null,
+      "status": "no_reliable_match",
+      "top": [
+        "PullRequest#6702",
+        "Issue#4965",
+        "PullRequest#5797",
+        "PullRequest#3809",
+        "PullRequest#5856"
+      ],
+      "latency_ms": 204.3,
+      "rejected": true
+    }
+  ]
+}
