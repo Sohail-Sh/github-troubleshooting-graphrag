@@ -415,7 +415,7 @@ def add_releases(g: GraphBuilder, snap: Snapshot, repo: ids.RepoRef, commit_to_p
     complete = bool(snap.manifest.get("release_history_complete"))
     tags = {t["tag"]: t for t in snap.read("git", "tags")}
     api_releases = {r["tag"]: r for r in snap.read("api", "releases")}
-    for tag in sorted(set(tags) | set(api_releases), key=version_key):
+    for tag in sorted(set(tags) | set(api_releases), key=lambda t: (version_key(t), t)):
         t, r = tags.get(tag, {}), api_releases.get(tag, {})
         rid = ids.release_id(repo, tag)
         g.node(
@@ -435,7 +435,7 @@ def add_releases(g: GraphBuilder, snap: Snapshot, repo: ids.RepoRef, commit_to_p
     for row in snap.read("git", "release_contains"):
         containing[row["commit_sha"]].append(row["tag"])
     for sha, tag_list in containing.items():
-        tag_list.sort(key=version_key)
+        tag_list.sort(key=lambda t: (version_key(t), t))
         for i, tag in enumerate(tag_list):
             g.rel(
                 "CONTAINS_COMMIT",

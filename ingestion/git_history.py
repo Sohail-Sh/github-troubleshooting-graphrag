@@ -211,7 +211,7 @@ class GitHistoryCollector:
             if not RELEASE_TAG_RE.match(name):
                 continue
             tags.append({"tag": name, "commit_sha": peeled or obj, "tagged_at": date})
-        tags.sort(key=lambda t: version_key(t["tag"]))
+        tags.sort(key=lambda t: (version_key(t["tag"]), t["tag"]))
         return tags
 
     def release_containment(self, tags: list[dict], shas: set[str]) -> list[dict]:
