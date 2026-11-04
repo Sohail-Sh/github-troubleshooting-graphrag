@@ -1,49 +1,49 @@
 {
   "snapshot": "psf-requests-v2.32.3",
-  "embedding_model": "hashing-ngrams-v1",
-  "cases_file": "/home/user/github-troubleshooting-graphrag/evaluation/benchmark_cases.json",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "cases_file": "/Users/ankushrastogi/Downloads/github-troubleshooting-graphrag/evaluation/benchmark_cases.json",
   "summary": {
     "keyword": {
       "hit_at_1": 0.353,
       "hit_at_5": 1.0,
       "mrr_at_5": 0.602,
       "answered_with_correct_fix": 0.353,
-      "false_rejections": 4,
-      "no_match_rejection": 1.0,
-      "avg_latency_ms": 223.4,
+      "false_rejections": 1,
+      "no_match_rejection": 0.833,
+      "avg_latency_ms": 109.4,
       "positives": 17,
       "negatives": 6
     },
     "vector": {
-      "hit_at_1": 0.529,
+      "hit_at_1": 0.471,
       "hit_at_5": 0.941,
-      "mrr_at_5": 0.656,
-      "answered_with_correct_fix": 0.529,
-      "false_rejections": 4,
+      "mrr_at_5": 0.664,
+      "answered_with_correct_fix": 0.412,
+      "false_rejections": 1,
       "no_match_rejection": 1.0,
-      "avg_latency_ms": 197.2,
+      "avg_latency_ms": 96.1,
       "positives": 17,
       "negatives": 6
     },
     "hybrid": {
       "hit_at_1": 0.588,
-      "hit_at_5": 1.0,
-      "mrr_at_5": 0.759,
-      "answered_with_correct_fix": 0.588,
-      "false_rejections": 1,
-      "no_match_rejection": 1.0,
-      "avg_latency_ms": 251.3,
+      "hit_at_5": 0.941,
+      "mrr_at_5": 0.723,
+      "answered_with_correct_fix": 0.529,
+      "false_rejections": 2,
+      "no_match_rejection": 0.833,
+      "avg_latency_ms": 121.4,
       "positives": 17,
       "negatives": 6
     },
     "graph": {
-      "hit_at_1": 0.765,
+      "hit_at_1": 0.824,
       "hit_at_5": 1.0,
-      "mrr_at_5": 0.882,
-      "answered_with_correct_fix": 0.706,
+      "mrr_at_5": 0.912,
+      "answered_with_correct_fix": 0.765,
       "false_rejections": 1,
       "no_match_rejection": 1.0,
-      "avg_latency_ms": 255.9,
+      "avg_latency_ms": 107.3,
       "positives": 17,
       "negatives": 6
     }
@@ -62,7 +62,7 @@
         "PullRequest#6095",
         "Issue#5367"
       ],
-      "latency_ms": 646.6,
+      "latency_ms": 126.5,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -84,7 +84,7 @@
         "PullRequest#4004",
         "Issue#3780"
       ],
-      "latency_ms": 318.7,
+      "latency_ms": 93.3,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -106,7 +106,7 @@
         "Issue#3780",
         "Issue#5367"
       ],
-      "latency_ms": 189.7,
+      "latency_ms": 132.7,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -128,7 +128,7 @@
         "PullRequest#6036",
         "PullRequest#4371"
       ],
-      "latency_ms": 170.8,
+      "latency_ms": 68.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -150,7 +150,7 @@
         "PullRequest#4004",
         "Issue#4030"
       ],
-      "latency_ms": 212.7,
+      "latency_ms": 106.5,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -172,7 +172,7 @@
         "Issue#4353",
         "PullRequest#4765"
       ],
-      "latency_ms": 178.0,
+      "latency_ms": 106.0,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -194,7 +194,7 @@
         "PullRequest#5924",
         "PullRequest#4805"
       ],
-      "latency_ms": 173.4,
+      "latency_ms": 84.5,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -216,7 +216,7 @@
         "PullRequest#6095",
         "PullRequest#4380"
       ],
-      "latency_ms": 139.2,
+      "latency_ms": 67.3,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -238,7 +238,7 @@
         "PullRequest#5128",
         "PullRequest#4067"
       ],
-      "latency_ms": 307.6,
+      "latency_ms": 90.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -252,7 +252,7 @@
       "case": "session-send-ignores-proxies",
       "kind": "positive",
       "rank": 3,
-      "status": "no_reliable_match",
+      "status": "fix_found",
       "top": [
         "PullRequest#6095",
         "PullRequest#4739",
@@ -260,12 +260,13 @@
         "Issue#3954",
         "PullRequest#5924"
       ],
-      "latency_ms": 103.7,
-      "rejected": true,
+      "latency_ms": 96.6,
+      "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
-      "evidence_level_ok": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
       "fix_path_correct": false
     },
     {
@@ -281,7 +282,7 @@
         "PullRequest#4067",
         "PullRequest#4922"
       ],
-      "latency_ms": 271.7,
+      "latency_ms": 98.8,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -303,7 +304,7 @@
         "PullRequest#6095",
         "PullRequest#6097"
       ],
-      "latency_ms": 105.2,
+      "latency_ms": 57.3,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -325,7 +326,7 @@
         "PullRequest#4004",
         "PullRequest#4067"
       ],
-      "latency_ms": 267.0,
+      "latency_ms": 112.4,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -339,7 +340,7 @@
       "case": "json-default-utf8",
       "kind": "positive",
       "rank": 2,
-      "status": "no_reliable_match",
+      "status": "fix_found",
       "top": [
         "PullRequest#6095",
         "Issue#5667",
@@ -347,12 +348,13 @@
         "PullRequest#5382",
         "PullRequest#4067"
       ],
-      "latency_ms": 219.8,
-      "rejected": true,
+      "latency_ms": 117.1,
+      "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
-      "evidence_level_ok": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
       "fix_path_correct": false
     },
     {
@@ -368,7 +370,7 @@
         "PullRequest#5496",
         "PullRequest#4678"
       ],
-      "latency_ms": 240.7,
+      "latency_ms": 91.9,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -390,7 +392,7 @@
         "PullRequest#3952",
         "PullRequest#6667"
       ],
-      "latency_ms": 145.5,
+      "latency_ms": 74.7,
       "rejected": true,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -403,7 +405,7 @@
       "case": "idna-import-slow",
       "kind": "positive",
       "rank": 2,
-      "status": "no_reliable_match",
+      "status": "fix_found",
       "top": [
         "PullRequest#4067",
         "Issue#3780",
@@ -411,12 +413,13 @@
         "PullRequest#4922",
         "PullRequest#3827"
       ],
-      "latency_ms": 264.8,
-      "rejected": true,
+      "latency_ms": 190.8,
+      "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
-      "evidence_level_ok": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
       "fix_path_correct": false
     },
     {
@@ -432,7 +435,7 @@
         "PullRequest#4332",
         "PullRequest#5777"
       ],
-      "latency_ms": 138.3,
+      "latency_ms": 77.0,
       "rejected": true
     },
     {
@@ -448,7 +451,7 @@
         "PullRequest#6498",
         "PullRequest#5160"
       ],
-      "latency_ms": 124.7,
+      "latency_ms": 85.7,
       "rejected": true
     },
     {
@@ -464,7 +467,7 @@
         "PullRequest#3979",
         "PullRequest#6149"
       ],
-      "latency_ms": 207.5,
+      "latency_ms": 107.1,
       "rejected": true
     },
     {
@@ -480,7 +483,7 @@
         "PullRequest#6095",
         "PullRequest#5909"
       ],
-      "latency_ms": 171.2,
+      "latency_ms": 91.4,
       "rejected": true
     },
     {
@@ -488,7 +491,7 @@
       "case": "neg-js-undefined-map",
       "kind": "negative",
       "rank": null,
-      "status": "no_reliable_match",
+      "status": "fix_found",
       "top": [
         "PullRequest#6095",
         "PullRequest#4835",
@@ -496,8 +499,8 @@
         "PullRequest#5496",
         "PullRequest#4004"
       ],
-      "latency_ms": 178.6,
-      "rejected": true
+      "latency_ms": 117.0,
+      "rejected": false
     },
     {
       "mode": "keyword",
@@ -508,23 +511,21 @@
       "top": [
         "PullRequest#4067"
       ],
-      "latency_ms": 363.6,
+      "latency_ms": 324.5,
       "rejected": true
     },
     {
       "mode": "vector",
       "case": "idna-leading-dot-message",
       "kind": "positive",
-      "rank": 8,
+      "rank": null,
       "status": "fix_found",
       "top": [
-        "PullRequest#6095",
-        "Issue#6628",
-        "PullRequest#4004",
         "PullRequest#4067",
-        "PullRequest#5856"
+        "PullRequest#3827",
+        "PullRequest#4004"
       ],
-      "latency_ms": 197.5,
+      "latency_ms": 372.9,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -537,38 +538,38 @@
       "mode": "vector",
       "case": "idna-leading-dot-prose",
       "kind": "positive",
-      "rank": 1,
+      "rank": 2,
       "status": "fix_found",
       "top": [
-        "Issue#5367",
         "PullRequest#6095",
-        "Issue#4353",
-        "PullRequest#6057",
-        "PullRequest#6036"
+        "Issue#5367",
+        "Issue#3780",
+        "PullRequest#4067",
+        "PullRequest#5856"
       ],
-      "latency_ms": 245.8,
+      "latency_ms": 85.3,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "vector",
       "case": "idna-leading-dot-traceback",
       "kind": "positive",
-      "rank": 5,
+      "rank": 4,
       "status": "fix_found",
       "top": [
         "PullRequest#6095",
         "PullRequest#4067",
         "Issue#3780",
-        "PullRequest#4004",
-        "Issue#5367"
+        "Issue#5367",
+        "PullRequest#4004"
       ],
-      "latency_ms": 388.2,
+      "latency_ms": 120.1,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -581,38 +582,38 @@
       "mode": "vector",
       "case": "ca-bundle-invalid-path",
       "kind": "positive",
-      "rank": 1,
+      "rank": 2,
       "status": "fix_found",
       "top": [
-        "Issue#3926",
-        "PullRequest#6095",
         "PullRequest#4835",
-        "PullRequest#5141",
-        "PullRequest#4371"
+        "Issue#3926",
+        "PullRequest#6667",
+        "PullRequest#6095",
+        "PullRequest#6074"
       ],
-      "latency_ms": 140.4,
+      "latency_ms": 82.8,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "vector",
       "case": "redirect-non-ascii-location",
       "kind": "positive",
-      "rank": 4,
+      "rank": 1,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#3846",
-        "PullRequest#6095",
-        "PullRequest#3963",
         "Issue#3888",
-        "PullRequest#4835"
+        "PullRequest#4835",
+        "PullRequest#6095",
+        "PullRequest#3846",
+        "PullRequest#3963"
       ],
-      "latency_ms": 186.3,
+      "latency_ms": 103.1,
       "rejected": true,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -624,19 +625,41 @@
       "mode": "vector",
       "case": "sslerror-raised-as-connectionerror",
       "kind": "positive",
-      "rank": 4,
+      "rank": 1,
       "status": "fix_found",
       "top": [
-        "PullRequest#6057",
-        "PullRequest#3827",
-        "PullRequest#4067",
         "Issue#4209",
-        "PullRequest#6095"
+        "PullRequest#6057",
+        "PullRequest#6724",
+        "PullRequest#4067",
+        "PullRequest#4004"
       ],
-      "latency_ms": 201.2,
+      "latency_ms": 88.9,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
+    },
+    {
+      "mode": "vector",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 5,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "PullRequest#5924",
+        "PullRequest#3865",
+        "Issue#4353"
+      ],
+      "latency_ms": 102.4,
       "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
       "evidence_level_ok": true,
       "evidence_level": "self",
@@ -644,47 +667,25 @@
     },
     {
       "mode": "vector",
-      "case": "malformed-proxy-url",
-      "kind": "positive",
-      "rank": 1,
-      "status": "fix_found",
-      "top": [
-        "Issue#4353",
-        "PullRequest#6095",
-        "PullRequest#3865",
-        "PullRequest#5670",
-        "PullRequest#4835"
-      ],
-      "latency_ms": 168.7,
-      "rejected": false,
-      "fix_pr_correct": true,
-      "files_correct": true,
-      "release_correct": true,
-      "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
-    },
-    {
-      "mode": "vector",
       "case": "winreg-proxyoverride-type",
       "kind": "positive",
-      "rank": 1,
+      "rank": 2,
       "status": "fix_found",
       "top": [
+        "PullRequest#6149",
         "Issue#4373",
-        "PullRequest#3979",
         "PullRequest#6095",
         "PullRequest#6302",
-        "PullRequest#6149"
+        "PullRequest#3979"
       ],
-      "latency_ms": 178.8,
+      "latency_ms": 75.6,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "vector",
@@ -695,11 +696,11 @@
       "top": [
         "Issue#5274",
         "PullRequest#6095",
-        "PullRequest#4004",
-        "PullRequest#4067",
-        "PullRequest#4835"
+        "PullRequest#3827",
+        "PullRequest#5906",
+        "Issue#4353"
       ],
-      "latency_ms": 258.0,
+      "latency_ms": 53.3,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -712,43 +713,44 @@
       "mode": "vector",
       "case": "session-send-ignores-proxies",
       "kind": "positive",
-      "rank": 1,
+      "rank": 3,
       "status": "fix_found",
       "top": [
-        "Issue#5677",
         "PullRequest#5924",
         "PullRequest#6095",
-        "PullRequest#6498",
+        "Issue#5677",
+        "PullRequest#6074",
         "PullRequest#3865"
       ],
-      "latency_ms": 99.2,
+      "latency_ms": 55.5,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "vector",
       "case": "zip-extract-race",
       "kind": "positive",
-      "rank": 4,
-      "status": "no_reliable_match",
+      "rank": 2,
+      "status": "fix_found",
       "top": [
         "PullRequest#5851",
+        "Issue#5223",
         "PullRequest#6095",
         "PullRequest#4371",
-        "Issue#5223",
-        "PullRequest#3827"
+        "PullRequest#4004"
       ],
-      "latency_ms": 167.7,
-      "rejected": true,
+      "latency_ms": 108.4,
+      "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
-      "evidence_level_ok": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
       "fix_path_correct": false
     },
     {
@@ -759,12 +761,12 @@
       "status": "fix_found",
       "top": [
         "Issue#6628",
-        "PullRequest#6097",
-        "PullRequest#5856",
         "PullRequest#6036",
-        "PullRequest#5777"
+        "PullRequest#5856",
+        "PullRequest#6095",
+        "PullRequest#6057"
       ],
-      "latency_ms": 187.9,
+      "latency_ms": 81.7,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -777,22 +779,23 @@
       "mode": "vector",
       "case": "leading-double-slash-path",
       "kind": "positive",
-      "rank": 5,
-      "status": "no_reliable_match",
+      "rank": 1,
+      "status": "fix_found",
       "top": [
+        "Issue#6643",
+        "PullRequest#4067",
         "PullRequest#6095",
-        "Issue#3954",
-        "PullRequest#4739",
-        "PullRequest#6368",
-        "Issue#6643"
+        "Issue#3844",
+        "PullRequest#5914"
       ],
-      "latency_ms": 92.2,
-      "rejected": true,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
-      "evidence_level_ok": false,
-      "fix_path_correct": false
+      "latency_ms": 90.1,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "referenced",
+      "fix_path_correct": true
     },
     {
       "mode": "vector",
@@ -802,12 +805,12 @@
       "status": "fix_found",
       "top": [
         "Issue#5667",
-        "PullRequest#4067",
         "PullRequest#6095",
-        "PullRequest#4371",
-        "PullRequest#6133"
+        "PullRequest#6702",
+        "PullRequest#5797",
+        "PullRequest#5336"
       ],
-      "latency_ms": 287.4,
+      "latency_ms": 76.3,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -820,16 +823,38 @@
       "mode": "vector",
       "case": "emoji-content-length",
       "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#6586",
+        "Issue#5667",
+        "PullRequest#6702",
+        "Issue#2332"
+      ],
+      "latency_ms": 75.4,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": false,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "vector",
+      "case": "custom-sslcontext-adapter",
+      "kind": "positive",
       "rank": 1,
       "status": "fix_found",
       "top": [
-        "Issue#6586",
+        "Issue#6715",
+        "Issue#3926",
+        "PullRequest#4835",
         "PullRequest#6095",
-        "PullRequest#5496",
-        "Issue#3844",
-        "PullRequest#5239"
+        "PullRequest#6724"
       ],
-      "latency_ms": 144.0,
+      "latency_ms": 56.6,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -840,46 +865,25 @@
     },
     {
       "mode": "vector",
-      "case": "custom-sslcontext-adapter",
-      "kind": "positive",
-      "rank": 2,
-      "status": "no_reliable_match",
-      "top": [
-        "PullRequest#6095",
-        "Issue#6715",
-        "PullRequest#6710",
-        "PullRequest#4004",
-        "PullRequest#6724"
-      ],
-      "latency_ms": 177.3,
-      "rejected": true,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
-      "evidence_level_ok": false,
-      "fix_path_correct": false
-    },
-    {
-      "mode": "vector",
       "case": "idna-import-slow",
       "kind": "positive",
-      "rank": 2,
-      "status": "fix_found",
+      "rank": 1,
+      "status": "match_without_fix",
       "top": [
-        "PullRequest#6095",
         "Issue#3780",
-        "PullRequest#3827",
-        "PullRequest#6505",
-        "PullRequest#4922"
+        "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#3991",
+        "PullRequest#5797"
       ],
-      "latency_ms": 259.2,
+      "latency_ms": 90.3,
       "rejected": false,
-      "fix_pr_correct": false,
+      "fix_pr_correct": true,
       "files_correct": true,
-      "release_correct": false,
+      "release_correct": true,
       "evidence_level_ok": true,
-      "evidence_level": "self",
-      "fix_path_correct": false
+      "evidence_level": "inferred",
+      "fix_path_correct": true
     },
     {
       "mode": "vector",
@@ -890,11 +894,11 @@
       "top": [
         "PullRequest#6095",
         "PullRequest#4004",
+        "PullRequest#4987",
         "PullRequest#4853",
-        "PullRequest#5777",
-        "PullRequest#3827"
+        "PullRequest#6036"
       ],
-      "latency_ms": 207.3,
+      "latency_ms": 69.7,
       "rejected": true
     },
     {
@@ -905,12 +909,12 @@
       "status": "no_reliable_match",
       "top": [
         "PullRequest#6095",
+        "PullRequest#6017",
         "PullRequest#6498",
-        "PullRequest#4805",
-        "PullRequest#4067",
-        "PullRequest#5856"
+        "PullRequest#4410",
+        "PullRequest#5160"
       ],
-      "latency_ms": 150.9,
+      "latency_ms": 53.3,
       "rejected": true
     },
     {
@@ -920,13 +924,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#4067",
         "PullRequest#6095",
-        "PullRequest#6057",
-        "PullRequest#4004",
-        "Issue#4209"
+        "PullRequest#6017",
+        "Issue#5212",
+        "PullRequest#4999",
+        "PullRequest#4343"
       ],
-      "latency_ms": 197.2,
+      "latency_ms": 88.0,
       "rejected": true
     },
     {
@@ -938,11 +942,11 @@
       "top": [
         "PullRequest#6095",
         "PullRequest#5856",
-        "PullRequest#4067",
-        "PullRequest#5338",
-        "PullRequest#6057"
+        "Issue#6628",
+        "PullRequest#6036",
+        "Issue#6260"
       ],
-      "latency_ms": 195.3,
+      "latency_ms": 91.1,
       "rejected": true
     },
     {
@@ -952,13 +956,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#4067",
-        "PullRequest#6095",
         "PullRequest#4004",
-        "PullRequest#6057",
+        "PullRequest#6036",
+        "Issue#6628",
+        "PullRequest#6095",
         "PullRequest#3827"
       ],
-      "latency_ms": 191.4,
+      "latency_ms": 77.9,
       "rejected": true
     },
     {
@@ -968,32 +972,32 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#4067",
-        "PullRequest#6702",
-        "PullRequest#4004",
-        "PullRequest#6095",
-        "Issue#4965"
+        "PullRequest#5928",
+        "PullRequest#3827",
+        "Issue#5212",
+        "PullRequest#6496",
+        "PullRequest#6448"
       ],
-      "latency_ms": 214.2,
+      "latency_ms": 111.1,
       "rejected": true
     },
     {
       "mode": "hybrid",
       "case": "idna-leading-dot-message",
       "kind": "positive",
-      "rank": 5,
+      "rank": 6,
       "status": "fix_found",
       "top": [
-        "PullRequest#4004",
-        "Issue#3780",
         "PullRequest#4067",
-        "PullRequest#6095",
-        "Issue#5367"
+        "PullRequest#4004",
+        "PullRequest#3827",
+        "Issue#3780",
+        "PullRequest#6095"
       ],
-      "latency_ms": 241.9,
+      "latency_ms": 122.2,
       "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
       "evidence_level_ok": true,
       "evidence_level": "self",
@@ -1003,23 +1007,23 @@
       "mode": "hybrid",
       "case": "idna-leading-dot-prose",
       "kind": "positive",
-      "rank": 1,
+      "rank": 2,
       "status": "fix_found",
       "top": [
-        "Issue#5367",
         "PullRequest#6095",
+        "Issue#5367",
         "Issue#3780",
-        "Issue#4353",
-        "PullRequest#4067"
+        "PullRequest#4067",
+        "PullRequest#4004"
       ],
-      "latency_ms": 250.8,
+      "latency_ms": 123.4,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "hybrid",
@@ -1028,16 +1032,16 @@
       "rank": 5,
       "status": "fix_found",
       "top": [
-        "PullRequest#4004",
-        "PullRequest#6095",
         "PullRequest#4067",
+        "PullRequest#6095",
+        "PullRequest#4004",
         "Issue#3780",
         "Issue#5367"
       ],
-      "latency_ms": 261.9,
+      "latency_ms": 138.0,
       "rejected": false,
       "fix_pr_correct": false,
-      "files_correct": false,
+      "files_correct": true,
       "release_correct": false,
       "evidence_level_ok": true,
       "evidence_level": "self",
@@ -1053,10 +1057,10 @@
         "Issue#3926",
         "PullRequest#4835",
         "PullRequest#6095",
-        "PullRequest#4371",
-        "PullRequest#3952"
+        "PullRequest#6667",
+        "PullRequest#4371"
       ],
-      "latency_ms": 182.3,
+      "latency_ms": 93.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1069,60 +1073,37 @@
       "mode": "hybrid",
       "case": "redirect-non-ascii-location",
       "kind": "positive",
-      "rank": 2,
-      "status": "fix_found",
+      "rank": 1,
+      "status": "no_reliable_match",
       "top": [
-        "PullRequest#6095",
         "Issue#3888",
+        "PullRequest#6095",
+        "PullRequest#4835",
         "PullRequest#3846",
-        "PullRequest#3963",
-        "Issue#3780"
+        "PullRequest#3963"
       ],
-      "latency_ms": 284.1,
-      "rejected": false,
+      "latency_ms": 111.9,
+      "rejected": true,
       "fix_pr_correct": false,
-      "files_correct": true,
+      "files_correct": false,
       "release_correct": false,
-      "evidence_level_ok": true,
-      "evidence_level": "self",
+      "evidence_level_ok": false,
       "fix_path_correct": false
     },
     {
       "mode": "hybrid",
       "case": "sslerror-raised-as-connectionerror",
       "kind": "positive",
-      "rank": 2,
-      "status": "fix_found",
-      "top": [
-        "PullRequest#6057",
-        "Issue#4209",
-        "PullRequest#4067",
-        "PullRequest#6095",
-        "Issue#4353"
-      ],
-      "latency_ms": 209.0,
-      "rejected": false,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
-      "evidence_level_ok": true,
-      "evidence_level": "self",
-      "fix_path_correct": false
-    },
-    {
-      "mode": "hybrid",
-      "case": "malformed-proxy-url",
-      "kind": "positive",
       "rank": 1,
       "status": "fix_found",
       "top": [
-        "Issue#4353",
-        "PullRequest#6095",
-        "PullRequest#5670",
-        "PullRequest#5924",
-        "PullRequest#6655"
+        "Issue#4209",
+        "PullRequest#6057",
+        "PullRequest#4217",
+        "PullRequest#4765",
+        "PullRequest#4004"
       ],
-      "latency_ms": 245.1,
+      "latency_ms": 111.9,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1133,18 +1114,40 @@
     },
     {
       "mode": "hybrid",
+      "case": "malformed-proxy-url",
+      "kind": "positive",
+      "rank": 2,
+      "status": "fix_found",
+      "top": [
+        "PullRequest#6095",
+        "Issue#4353",
+        "PullRequest#5924",
+        "PullRequest#4835",
+        "PullRequest#6581"
+      ],
+      "latency_ms": 92.7,
+      "rejected": false,
+      "fix_pr_correct": false,
+      "files_correct": true,
+      "release_correct": false,
+      "evidence_level_ok": true,
+      "evidence_level": "self",
+      "fix_path_correct": false
+    },
+    {
+      "mode": "hybrid",
       "case": "winreg-proxyoverride-type",
       "kind": "positive",
       "rank": 2,
       "status": "fix_found",
       "top": [
-        "PullRequest#3979",
-        "Issue#4373",
-        "PullRequest#6095",
         "PullRequest#6149",
+        "Issue#4373",
+        "PullRequest#3979",
+        "PullRequest#6095",
         "PullRequest#6302"
       ],
-      "latency_ms": 189.7,
+      "latency_ms": 97.8,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -1161,12 +1164,12 @@
       "status": "fix_found",
       "top": [
         "Issue#5274",
-        "PullRequest#4067",
         "PullRequest#6095",
-        "PullRequest#4004",
-        "PullRequest#4739"
+        "PullRequest#4739",
+        "PullRequest#3827",
+        "PullRequest#4910"
       ],
-      "latency_ms": 228.6,
+      "latency_ms": 105.6,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1179,23 +1182,23 @@
       "mode": "hybrid",
       "case": "session-send-ignores-proxies",
       "kind": "positive",
-      "rank": 1,
+      "rank": 3,
       "status": "fix_found",
       "top": [
-        "Issue#5677",
-        "PullRequest#5924",
         "PullRequest#6095",
+        "PullRequest#5924",
+        "Issue#5677",
         "PullRequest#6498",
-        "PullRequest#3865"
+        "PullRequest#6074"
       ],
-      "latency_ms": 162.5,
+      "latency_ms": 78.9,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "hybrid",
@@ -1208,9 +1211,9 @@
         "PullRequest#4371",
         "PullRequest#6095",
         "PullRequest#5851",
-        "PullRequest#3827"
+        "PullRequest#4922"
       ],
-      "latency_ms": 284.3,
+      "latency_ms": 168.2,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1229,10 +1232,10 @@
         "Issue#6628",
         "PullRequest#6036",
         "PullRequest#5856",
-        "PullRequest#6097",
-        "PullRequest#5777"
+        "PullRequest#6057",
+        "Issue#6260"
       ],
-      "latency_ms": 201.1,
+      "latency_ms": 107.9,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1249,12 +1252,12 @@
       "status": "fix_found",
       "top": [
         "Issue#6643",
-        "Issue#3954",
-        "PullRequest#4739",
-        "PullRequest#4910",
-        "PullRequest#6095"
+        "PullRequest#6095",
+        "PullRequest#4067",
+        "PullRequest#4004",
+        "PullRequest#4805"
       ],
-      "latency_ms": 282.9,
+      "latency_ms": 143.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1272,11 +1275,11 @@
       "top": [
         "Issue#5667",
         "PullRequest#6095",
-        "PullRequest#4749",
-        "PullRequest#4067",
-        "PullRequest#4976"
+        "PullRequest#4805",
+        "PullRequest#5797",
+        "PullRequest#6097"
       ],
-      "latency_ms": 261.1,
+      "latency_ms": 124.5,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1294,11 +1297,11 @@
       "top": [
         "Issue#6586",
         "PullRequest#6095",
-        "PullRequest#5496",
-        "PullRequest#4067",
-        "PullRequest#6154"
+        "Issue#2332",
+        "Issue#5667",
+        "PullRequest#5496"
       ],
-      "latency_ms": 239.6,
+      "latency_ms": 137.6,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1311,16 +1314,16 @@
       "mode": "hybrid",
       "case": "custom-sslcontext-adapter",
       "kind": "positive",
-      "rank": 2,
+      "rank": 4,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#6095",
-        "Issue#6715",
-        "PullRequest#6710",
         "Issue#3926",
+        "PullRequest#6095",
+        "PullRequest#4835",
+        "Issue#6715",
         "PullRequest#6667"
       ],
-      "latency_ms": 278.0,
+      "latency_ms": 78.4,
       "rejected": true,
       "fix_pr_correct": false,
       "files_correct": false,
@@ -1332,23 +1335,23 @@
       "mode": "hybrid",
       "case": "idna-import-slow",
       "kind": "positive",
-      "rank": 2,
-      "status": "fix_found",
+      "rank": 1,
+      "status": "match_without_fix",
       "top": [
-        "PullRequest#6095",
         "Issue#3780",
         "PullRequest#4067",
+        "PullRequest#6095",
         "PullRequest#4922",
-        "PullRequest#3827"
+        "PullRequest#3991"
       ],
-      "latency_ms": 370.6,
+      "latency_ms": 160.8,
       "rejected": false,
-      "fix_pr_correct": false,
+      "fix_pr_correct": true,
       "files_correct": true,
-      "release_correct": false,
+      "release_correct": true,
       "evidence_level_ok": true,
-      "evidence_level": "self",
-      "fix_path_correct": false
+      "evidence_level": "inferred",
+      "fix_path_correct": true
     },
     {
       "mode": "hybrid",
@@ -1359,11 +1362,11 @@
       "top": [
         "PullRequest#6095",
         "PullRequest#4853",
-        "PullRequest#5777",
         "PullRequest#4987",
-        "PullRequest#6097"
+        "PullRequest#4332",
+        "PullRequest#4004"
       ],
-      "latency_ms": 223.6,
+      "latency_ms": 118.4,
       "rejected": true
     },
     {
@@ -1374,12 +1377,12 @@
       "status": "no_reliable_match",
       "top": [
         "PullRequest#6095",
+        "PullRequest#4978",
         "PullRequest#6498",
-        "PullRequest#6018",
-        "PullRequest#4805",
+        "PullRequest#5160",
         "PullRequest#4410"
       ],
-      "latency_ms": 229.7,
+      "latency_ms": 101.3,
       "rejected": true
     },
     {
@@ -1389,13 +1392,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
+        "PullRequest#4835",
         "PullRequest#4004",
         "PullRequest#6095",
-        "PullRequest#4067",
-        "PullRequest#6057",
-        "PullRequest#4835"
+        "PullRequest#3988",
+        "PullRequest#3979"
       ],
-      "latency_ms": 294.7,
+      "latency_ms": 155.3,
       "rejected": true
     },
     {
@@ -1406,12 +1409,12 @@
       "status": "no_reliable_match",
       "top": [
         "PullRequest#6095",
-        "PullRequest#4805",
-        "PullRequest#5856",
         "PullRequest#6155",
-        "PullRequest#4067"
+        "PullRequest#5856",
+        "Issue#6628",
+        "PullRequest#6036"
       ],
-      "latency_ms": 398.5,
+      "latency_ms": 153.7,
       "rejected": true
     },
     {
@@ -1419,16 +1422,16 @@
       "case": "neg-js-undefined-map",
       "kind": "negative",
       "rank": null,
-      "status": "no_reliable_match",
+      "status": "fix_found",
       "top": [
         "PullRequest#6095",
-        "PullRequest#6057",
-        "PullRequest#3865",
-        "PullRequest#4835",
-        "PullRequest#4067"
+        "PullRequest#4004",
+        "PullRequest#6036",
+        "Issue#6356",
+        "PullRequest#5338"
       ],
-      "latency_ms": 269.1,
-      "rejected": true
+      "latency_ms": 148.3,
+      "rejected": false
     },
     {
       "mode": "hybrid",
@@ -1437,36 +1440,36 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
+        "PullRequest#5928",
         "PullRequest#4067",
-        "PullRequest#6702",
-        "PullRequest#4004",
-        "PullRequest#6095",
-        "Issue#4965"
+        "PullRequest#3827",
+        "Issue#5212",
+        "PullRequest#6496"
       ],
-      "latency_ms": 189.9,
+      "latency_ms": 120.3,
       "rejected": true
     },
     {
       "mode": "graph",
       "case": "idna-leading-dot-message",
       "kind": "positive",
-      "rank": 1,
-      "status": "fix_found",
+      "rank": 2,
+      "status": "match_without_fix",
       "top": [
-        "Issue#5367",
         "Issue#3780",
+        "Issue#5367",
         "PullRequest#4067",
-        "PullRequest#6095",
-        "PullRequest#4004"
+        "PullRequest#4004",
+        "PullRequest#6095"
       ],
-      "latency_ms": 275.6,
+      "latency_ms": 94.2,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
-      "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "release_correct": false,
+      "evidence_level_ok": false,
+      "evidence_level": "inferred",
+      "fix_path_correct": false
     },
     {
       "mode": "graph",
@@ -1479,9 +1482,9 @@
         "Issue#3780",
         "PullRequest#6095",
         "PullRequest#4067",
-        "Issue#4353"
+        "PullRequest#4004"
       ],
-      "latency_ms": 327.6,
+      "latency_ms": 117.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1503,7 +1506,7 @@
         "PullRequest#4067",
         "PullRequest#4004"
       ],
-      "latency_ms": 229.4,
+      "latency_ms": 117.6,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1525,7 +1528,7 @@
         "PullRequest#6036",
         "PullRequest#6095"
       ],
-      "latency_ms": 198.6,
+      "latency_ms": 105.4,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1538,45 +1541,44 @@
       "mode": "graph",
       "case": "redirect-non-ascii-location",
       "kind": "positive",
-      "rank": 2,
-      "status": "match_without_fix",
+      "rank": 1,
+      "status": "no_reliable_match",
       "top": [
-        "Issue#4030",
         "Issue#3888",
         "PullRequest#6095",
-        "PullRequest#3846",
-        "PullRequest#3963"
+        "Issue#4030",
+        "PullRequest#4004",
+        "PullRequest#4067"
       ],
-      "latency_ms": 307.8,
-      "rejected": false,
+      "latency_ms": 106.8,
+      "rejected": true,
       "fix_pr_correct": false,
       "files_correct": false,
       "release_correct": false,
       "evidence_level_ok": false,
-      "evidence_level": "inferred",
       "fix_path_correct": false
     },
     {
       "mode": "graph",
       "case": "sslerror-raised-as-connectionerror",
       "kind": "positive",
-      "rank": 2,
+      "rank": 1,
       "status": "fix_found",
       "top": [
-        "PullRequest#6057",
         "Issue#4209",
+        "PullRequest#6057",
         "PullRequest#4217",
         "PullRequest#4765",
-        "PullRequest#5810"
+        "PullRequest#5914"
       ],
-      "latency_ms": 227.0,
+      "latency_ms": 112.4,
       "rejected": false,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
       "evidence_level_ok": true,
-      "evidence_level": "self",
-      "fix_path_correct": false
+      "evidence_level": "referenced",
+      "fix_path_correct": true
     },
     {
       "mode": "graph",
@@ -1586,12 +1588,12 @@
       "status": "fix_found",
       "top": [
         "Issue#4353",
-        "PullRequest#5670",
-        "PullRequest#6655",
         "PullRequest#5924",
-        "PullRequest#3865"
+        "PullRequest#5670",
+        "PullRequest#6581",
+        "PullRequest#6655"
       ],
-      "latency_ms": 211.9,
+      "latency_ms": 83.5,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1607,13 +1609,13 @@
       "rank": 2,
       "status": "fix_found",
       "top": [
-        "PullRequest#3979",
-        "Issue#4373",
         "PullRequest#6149",
+        "Issue#4373",
+        "PullRequest#3979",
         "PullRequest#6302",
         "PullRequest#4380"
       ],
-      "latency_ms": 209.5,
+      "latency_ms": 95.9,
       "rejected": false,
       "fix_pr_correct": false,
       "files_correct": true,
@@ -1635,7 +1637,7 @@
         "PullRequest#5128",
         "PullRequest#4910"
       ],
-      "latency_ms": 269.2,
+      "latency_ms": 108.8,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1648,23 +1650,23 @@
       "mode": "graph",
       "case": "session-send-ignores-proxies",
       "kind": "positive",
-      "rank": 1,
+      "rank": 2,
       "status": "fix_found",
       "top": [
-        "Issue#5677",
         "PullRequest#5924",
+        "Issue#5677",
+        "PullRequest#6074",
         "PullRequest#6498",
-        "PullRequest#3865",
-        "PullRequest#6581"
+        "PullRequest#5894"
       ],
-      "latency_ms": 140.4,
+      "latency_ms": 69.9,
       "rejected": false,
-      "fix_pr_correct": true,
+      "fix_pr_correct": false,
       "files_correct": true,
-      "release_correct": true,
+      "release_correct": false,
       "evidence_level_ok": true,
-      "evidence_level": "referenced",
-      "fix_path_correct": true
+      "evidence_level": "self",
+      "fix_path_correct": false
     },
     {
       "mode": "graph",
@@ -1677,9 +1679,9 @@
         "PullRequest#4371",
         "PullRequest#5851",
         "PullRequest#4922",
-        "PullRequest#4316"
+        "PullRequest#5917"
       ],
-      "latency_ms": 276.6,
+      "latency_ms": 119.0,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1692,23 +1694,23 @@
       "mode": "graph",
       "case": "jsondecodeerror-unpickle",
       "kind": "positive",
-      "rank": 2,
+      "rank": 1,
       "status": "fix_found",
       "top": [
-        "PullRequest#5856",
         "Issue#6628",
         "PullRequest#6036",
-        "PullRequest#6097",
-        "PullRequest#5777"
+        "PullRequest#5856",
+        "PullRequest#6057",
+        "PullRequest#6097"
       ],
-      "latency_ms": 253.2,
+      "latency_ms": 100.1,
       "rejected": false,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
       "evidence_level_ok": true,
-      "evidence_level": "self",
-      "fix_path_correct": false
+      "evidence_level": "referenced",
+      "fix_path_correct": true
     },
     {
       "mode": "graph",
@@ -1718,12 +1720,12 @@
       "status": "fix_found",
       "top": [
         "Issue#6643",
-        "Issue#3954",
-        "PullRequest#4739",
-        "PullRequest#4910",
-        "PullRequest#6368"
+        "Issue#5367",
+        "PullRequest#6169",
+        "PullRequest#6261",
+        "PullRequest#3812"
       ],
-      "latency_ms": 260.1,
+      "latency_ms": 128.1,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1740,12 +1742,12 @@
       "status": "fix_found",
       "top": [
         "Issue#5667",
-        "PullRequest#4749",
-        "PullRequest#4976",
-        "PullRequest#5382",
-        "PullRequest#4371"
+        "PullRequest#5336",
+        "PullRequest#5797",
+        "PullRequest#6097",
+        "PullRequest#4976"
       ],
-      "latency_ms": 285.6,
+      "latency_ms": 109.8,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1763,11 +1765,11 @@
       "top": [
         "Issue#6586",
         "PullRequest#5496",
-        "PullRequest#6154",
+        "Issue#5667",
         "PullRequest#4678",
-        "PullRequest#6095"
+        "PullRequest#6702"
       ],
-      "latency_ms": 328.4,
+      "latency_ms": 107.2,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1784,12 +1786,12 @@
       "status": "fix_found",
       "top": [
         "Issue#6715",
-        "PullRequest#6710",
+        "Issue#3926",
         "PullRequest#6724",
-        "PullRequest#6667",
-        "Issue#3926"
+        "PullRequest#6710",
+        "PullRequest#6667"
       ],
-      "latency_ms": 265.5,
+      "latency_ms": 90.1,
       "rejected": false,
       "fix_pr_correct": true,
       "files_correct": true,
@@ -1803,21 +1805,22 @@
       "case": "idna-import-slow",
       "kind": "positive",
       "rank": 1,
-      "status": "no_reliable_match",
+      "status": "match_without_fix",
       "top": [
         "Issue#3780",
+        "PullRequest#3991",
         "PullRequest#4922",
         "PullRequest#3979",
-        "PullRequest#4182",
-        "PullRequest#5797"
+        "PullRequest#4182"
       ],
-      "latency_ms": 288.0,
-      "rejected": true,
-      "fix_pr_correct": false,
-      "files_correct": false,
-      "release_correct": false,
-      "evidence_level_ok": false,
-      "fix_path_correct": false
+      "latency_ms": 123.5,
+      "rejected": false,
+      "fix_pr_correct": true,
+      "files_correct": true,
+      "release_correct": true,
+      "evidence_level_ok": true,
+      "evidence_level": "inferred",
+      "fix_path_correct": true
     },
     {
       "mode": "graph",
@@ -1827,12 +1830,12 @@
       "status": "no_reliable_match",
       "top": [
         "PullRequest#4853",
-        "PullRequest#5777",
         "PullRequest#4987",
-        "PullRequest#6097",
+        "PullRequest#4332",
+        "PullRequest#6017",
         "PullRequest#5856"
       ],
-      "latency_ms": 236.9,
+      "latency_ms": 90.6,
       "rejected": true
     },
     {
@@ -1842,13 +1845,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#6498",
-        "PullRequest#6018",
         "PullRequest#4978",
         "PullRequest#5856",
-        "PullRequest#4410"
+        "PullRequest#6498",
+        "PullRequest#4410",
+        "PullRequest#5810"
       ],
-      "latency_ms": 238.8,
+      "latency_ms": 67.3,
       "rejected": true
     },
     {
@@ -1861,10 +1864,10 @@
         "PullRequest#3979",
         "PullRequest#5643",
         "PullRequest#5105",
-        "PullRequest#6057",
+        "PullRequest#4835",
         "PullRequest#6095"
       ],
-      "latency_ms": 287.9,
+      "latency_ms": 143.7,
       "rejected": true
     },
     {
@@ -1874,13 +1877,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#5856",
         "PullRequest#6155",
-        "PullRequest#6057",
-        "PullRequest#5338",
-        "PullRequest#6497"
+        "PullRequest#5856",
+        "Issue#6628",
+        "PullRequest#6036",
+        "Issue#6260"
       ],
-      "latency_ms": 290.9,
+      "latency_ms": 123.0,
       "rejected": true
     },
     {
@@ -1890,13 +1893,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#6057",
-        "PullRequest#3865",
-        "PullRequest#3979",
         "PullRequest#5338",
-        "PullRequest#5496"
+        "PullRequest#6154",
+        "PullRequest#6057",
+        "PullRequest#5496",
+        "PullRequest#3865"
       ],
-      "latency_ms": 271.8,
+      "latency_ms": 126.3,
       "rejected": true
     },
     {
@@ -1906,13 +1909,13 @@
       "rank": null,
       "status": "no_reliable_match",
       "top": [
-        "PullRequest#6702",
-        "Issue#4965",
-        "PullRequest#5797",
-        "PullRequest#3809",
-        "PullRequest#5856"
+        "PullRequest#5928",
+        "PullRequest#6496",
+        "PullRequest#6448",
+        "PullRequest#4999",
+        "PullRequest#6325"
       ],
-      "latency_ms": 204.3,
+      "latency_ms": 127.7,
       "rejected": true
     }
   ]

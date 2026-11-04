@@ -20,7 +20,7 @@ def test_fix_found_flow():
     assert not at.exception
     assert any("Historical fix found" in s.value for s in at.success)
     assert any("Issue #5367" in m.value for m in at.markdown)
-    assert [t.label for t in at.tabs] == ["Summary", "Fix Graph", "Code Diff", "Evidence", "Cypher"]
+    assert [t.label for t in at.tabs] == ["Summary", "Fix Graph", "Related Fixes", "Code Diff", "Evidence", "Cypher"]
 
 
 def test_no_match_flow_replaces_previous_result():

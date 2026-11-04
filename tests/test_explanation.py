@@ -12,7 +12,7 @@ CANDIDATE = {
 PATH = {
     "issue": {"id": "repo:psf/requests:issue:5367", "number": 5367, "title": None, "url": "https://github.com/psf/requests/issues/5367", "hydrated": False, "type_confirmed": False},
     "comments": [],
-    "pr": {"number": 5414, "title": "Raise InvalidUrl if host starts with '.' character.", "url": "https://github.com/psf/requests/pull/5414", "body": ""},
+    "pr": {"id": "repo:psf/requests:pr:5414", "number": 5414, "title": "Raise InvalidUrl if host starts with '.' character.", "url": "https://github.com/psf/requests/pull/5414", "body": ""},
     "links": [{"type": "REFERENCES", "verification_status": "referenced", "basis": "commit_message_text_mention", "bases": ["commit_message_text_mention"], "source_url": "https://github.com/psf/requests/commit/658c10e8"}],
     "merge_commit": {"sha": "d09659997cd1e3eca49a07c59ece5557071c0ab9", "short_sha": "d0965999", "url": "https://github.com/psf/requests/commit/d0965999", "message": "Merge pull request #5414"},
     "releases": [{"tag": "v2.27.0", "url": "u", "published_at": "2022-01-03", "earliest": True, "basis": "git_tag_ancestry", "source_url": "s"}],

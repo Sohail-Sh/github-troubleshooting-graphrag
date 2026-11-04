@@ -99,3 +99,86 @@ def test_traversal_does_not_jump_between_issues_via_shared_files(inv):
     b = res.bundle
     assert b.issue["number"] == 5367
     assert {fx.pr_number for fx in b.fixes} == {5414}  # PRs that merely touch models.py are not pulled in
+
+
+# ---------------------------------------------------------------------------- Related Fix Discovery (P0-A)
+
+@pytest.fixture(scope="module")
+def pr_5414_id(store):
+    return store.query("MATCH (p:PullRequest {number: 5414}) RETURN p.id AS id")[0]["id"]
+
+
+def test_related_fixes_returns_real_pr_ids_that_exist_in_the_graph(store, pr_5414_id):
+    from retrieval.related_fixes import find_related_fixes
+
+    results = find_related_fixes(store, pr_5414_id)
+    assert results, "expected at least one related PR for #5414 in this snapshot (see docs/ENHANCEMENT_VALIDATION.md)"
+    for r in results:
+        rows = store.query("MATCH (p:PullRequest {id: $id}) RETURN p.number AS number", id=r.pr_id)
+        assert rows and rows[0]["number"] == r.pr_number, f"related result {r.pr_id} does not match a real PullRequest node"
+
+
+def test_related_fixes_top_result_is_the_known_lazy_load_idna_pr(store, pr_5414_id):
+    """PR #3789 ('lazy load idna library') is the real, independently-documented related fix for #5414 -
+    see docs/EVALUATION.md's caveat about #3780/#5367 touching the same code. This is not a seeded/fabricated
+    result: it is produced by the same traversal as every other candidate."""
+    from retrieval.related_fixes import find_related_fixes
+
+    results = find_related_fixes(store, pr_5414_id)
+    assert results[0].pr_number == 3789
+    assert "InvalidURL" in results[0].shared_exceptions_mentioned or "InvalidURL" in results[0].shared_exceptions_changed_lines
+
+
+def test_related_fixes_paths_verified_independently(store, pr_5414_id):
+    """Re-derive each returned exception-sharing reason with a query that is NOT the service's own traversal
+    logic (graph.queries.RELATED_FIXES_VERIFY_PATH), per acceptance criterion AC-04."""
+    from graph import queries
+    from retrieval.related_fixes import find_related_fixes
+
+    results = find_related_fixes(store, pr_5414_id)
+    checked = 0
+    for r in results:
+        for exc in set(r.shared_exceptions_changed_lines) | set(r.shared_exceptions_mentioned):
+            n = store.query(queries.RELATED_FIXES_VERIFY_PATH, src_id=pr_5414_id, dst_id=r.pr_id, exception=exc)[0]["n"]
+            assert n > 0, f"claimed shared exception {exc} for PR #{r.pr_number} has no independently-verifiable path"
+            checked += 1
+    assert checked > 0
+
+
+def test_related_fixes_deterministic_and_deduplicated(store, pr_5414_id):
+    from retrieval.related_fixes import find_related_fixes
+
+    a = [r.pr_id for r in find_related_fixes(store, pr_5414_id)]
+    b = [r.pr_id for r in find_related_fixes(store, pr_5414_id)]
+    assert a == b
+    assert len(a) == len(set(a))
+
+
+def test_related_fixes_writes_no_new_issue_links(store, pr_5414_id):
+    before = store.query("MATCH ()-[r:CLOSES|REFERENCES|POSSIBLY_ADDRESSES]->() RETURN count(r) AS n")[0]["n"]
+    from retrieval.related_fixes import find_related_fixes
+
+    find_related_fixes(store, pr_5414_id)
+    after = store.query("MATCH ()-[r:CLOSES|REFERENCES|POSSIBLY_ADDRESSES]->() RETURN count(r) AS n")[0]["n"]
+    assert before == after
+
+
+def test_related_fixes_excludes_source_pr(store, pr_5414_id):
+    from retrieval.related_fixes import find_related_fixes
+
+    results = find_related_fixes(store, pr_5414_id)
+    assert all(r.pr_id != pr_5414_id for r in results)
+
+
+def test_milestone_fix_path_unchanged_by_related_fixes_feature(inv):
+    """Same assertion as test_milestone_fix_path_5367's intent, exercised through the investigator: adding
+    Related Fix Discovery must not change the primary investigation result for the headline demo case."""
+    res = inv.investigate(
+        'Traceback (most recent call last):\n  File "/usr/lib/python3.9/site-packages/requests/models.py", line 401, in prepare_url\n'
+        "    host = self._get_idna_encoded_host(host)\nUnicodeError: encoding with 'idna' codec failed (UnicodeError: label empty or too long)",
+        "graph",
+        library_version="2.26.0",
+    )
+    assert res.status == "fix_found"
+    assert res.bundle.primary_fix.pr_number == 5414
+    assert res.bundle.primary_fix.earliest_release == "v2.27.0"
