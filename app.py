@@ -13,8 +13,10 @@ from retrieval.pipeline import Investigator
 from ui.evaluation_view import render_evaluation
 from ui.investigation_view import render_investigation
 from ui.repository_view import render_repository
+from ui.theme import apply_theme, sidebar_brand, status_chip
 
 st.set_page_config(page_title="Stack Trace → Fix Path", page_icon="🧭", layout="wide")
+apply_theme()
 
 
 @st.cache_resource(show_spinner=False)
@@ -42,14 +44,11 @@ def main() -> None:
     connected, signature, detail = backend_signature(store)
 
     with st.sidebar:
-        st.markdown("### 🧭 Stack Trace → Fix Path")
-        st.caption("GitHub troubleshooting graphs with Neo4j")
-        if connected:
-            st.success("Neo4j connected", icon="✅")
-        else:
-            st.error("Neo4j offline", icon="⚠️")
+        sidebar_brand("Stack Trace → Fix Path", "GitHub troubleshooting graphs with Neo4j")
+        status_chip(connected, "Neo4j connected" if connected else "Neo4j offline")
         st.caption(detail)
         view = st.radio("View", ["Troubleshoot", "Repository", "Evaluation"], key="view")
+        st.divider()
         use_llm = st.toggle(
             "LLM explanation (Claude)",
             value=settings.llm_provider == "anthropic",
