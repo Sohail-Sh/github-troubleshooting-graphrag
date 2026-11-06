@@ -28,6 +28,7 @@ class EvidenceItem:
 
 @dataclass
 class FixEvidence:
+    pr_id: str
     pr_number: int
     pr_title: str
     pr_url: str
@@ -120,6 +121,7 @@ def build_bundle(
             continue
         link = p["links"][0] if p["links"] else {}
         fx = FixEvidence(
+            pr_id=pr["id"],
             pr_number=pr["number"],
             pr_title=pr.get("title") or "",
             pr_url=pr.get("url"),
